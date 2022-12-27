@@ -1,0 +1,119 @@
+@import "layout";
+@import "var";
+@import "typography";
+@import "functions";
+
+.card {
+  position: relative;
+  padding: 48px;
+
+  @include breakpoint(desktop) {
+    padding: 47px 51px 48px 45px;
+  }
+
+  .card__button {
+    padding: 11px 32px;
+    border: 1px solid transparent;
+    border-radius: 25px;
+
+    @include breakpoint(desktop) {
+    }
+
+    &:hover {
+      @include breakpoint(desktop) {
+        cursor: pointer;
+        background-color: var(--bg1);
+        border: 1px solid var(--color1);
+      }
+    }
+  }
+
+  &:first-child {
+    background: var(--bg1);
+    border-radius: 8px 0 0 8px;
+
+    &:before {
+      @include card-picture;
+      background-image: url("./assets/icon-sedans.svg");
+    }
+
+    .card__button {
+      color: var(--bg1);
+
+      &:hover {
+        @include breakpoint(desktop) {
+          background-color: var(--bg1);
+          color: var(--color1);
+        }
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    background: var(--bg2);
+
+    &:before {
+      @include card-picture;
+      background-image: url("./assets/icon-suvs.svg");
+    }
+
+    .card__button {
+      color: var(--bg2);
+
+      &:hover {
+        @include breakpoint(desktop) {
+          background-color: var(--bg2);
+          color: var(--color1);
+        }
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    background: var(--bg3);
+
+    &:before {
+      @include card-picture;
+      background-image: url("./assets/icon-luxury.svg");
+    }
+  }
+
+  .card__button {
+    color: var(--bg3);
+
+    &:hover {
+      @include breakpoint(desktop) {
+        background-color: var(--bg3);
+        color: var(--color1);
+      }
+    }
+  }
+
+  &:last-child {
+    border-radius: 0 8px 8px 0;
+  }
+}
+
+.card__button {
+  background: var(--color1);
+  outline: none;
+  @include text-secondary;
+  font-family: var(--font-secondary);
+  padding: 20px 40px;
+  border-radius: 25px;
+  border: none;
+}
+
+.card__heading {
+  @include text-heading;
+  font-family: var(--font-primary);
+  color: var(--color1);
+  margin-bottom: 25px;
+}
+
+.card__text {
+  @include text-secondary;
+  font-family: var(--font-secondary);
+  color: var(--text-secondary);
+  margin-bottom: 83px;
+}
