@@ -1,0 +1,15 @@
+:root {
+  --color1: #f2f2f2;
+  --text-secondary: #ffffff;
+  --bg1: #e28625;
+  --bg2: #006971;
+  --bg3: #004140;
+}
+
+%card-picture {
+  content: "";
+  width: 64px;
+  height: 40px;
+  display: block;
+  margin-bottom: 35px;
+}
