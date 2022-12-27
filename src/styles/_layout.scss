@@ -1,19 +1,24 @@
 @import "functions";
 
-body,
-html {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
   height: 100%;
 }
 
 .layout {
   border-radius: 8px;
-  overflow: hidden;
-  height: 100%;
+  padding: 88px 24px;
 
   @include breakpoint(desktop) {
     display: flex;
-    align-items: center;
+    max-width: 920px;
+    margin: auto;
+    padding: 171px 0 0 0;
   }
 }

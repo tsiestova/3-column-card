@@ -15,11 +15,3 @@
   font-size: 15px;
   line-height: 25px;
 }
-
-@mixin card-picture {
-  content: "";
-  width: 64px;
-  height: 40px;
-  display: block;
-  margin-bottom: 35px;
-}
